@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="../css/imc.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <img id="img_cabecalho" src="../img/img_cabecalho.png" alt="">
+        </div>
+    </header>
+
+    <nav>
+        <div id="barra_de_navegacao">
+            <ul>
+                <li><a href="../index.html">Bons hábitos alimentares</a></li>
+                <li><a href="maus_habitos_alimentares.html">Maus hábitos alimentares</a></li>
+            </ul> 
+        </div>
+    </nav>
+
+    <div id="calcula_imc">
+        <h2>Calculo IMC</h2>
+
+        <div class="idade">
+            <label for="idade">Idade</label>
+            <input type="number" name="idade" id="idade" placeholder="Idade em anos">
+        </div>
+
+        <div class="divAltura">
+            <label for="altura">Altura (m)</label>
+            <input type="number" id="altura" placeholder="Exemplo: 1,70">
+        </div>
+
+        <div class="divPeso">
+            <label for="peso">Peso (Kg)</label>
+            <input type="number" id="peso" placeholder="peso">
+        </div>
+
+        <div class="divCalc">
+            <button onclick="calcIMC()">Calcular</button>
+        </div>
+
+        <span id="classificacao-img"></span>
+
+        <span id="resultado"></span>
+
+    </div>
+
+    <script src="../js/javascript.js"></script>
+
+    <main class="conteudo_principal" id="conteudo_principal_imc">
+        <h1 id="titulo_principal">O que é IMC e como calculá-lo</h1>
+
+        <section>
+            <div>
+                <p class="texto">
+                    O IMC é um índice que mede se você está abaixo, dentro ou acima do peso, de acordo com a relação entre seu peso e altura. Descubra como calcular esse
+                    índice, quais os valores ideais, as exceções da tabela padrão, a especificidade do IMC para crianças e jovens e muito mais neste artigo completo.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">Cálculo do Índice de Massa Corporal</h2>
+                <p class="texto">
+                    Para a sua posição na tabela do Índice de Massa Corporal, você precisa de dois valores: seu peso e altura. É só dividir o peso (em quilos) pelo quadrado da altura
+                    (em metros), que é obtido pela multiplicação da altura por ela mesma.
+                    Então, a fórmula fica assim: IMC = Peso / Altura².
+                    Se matemática não for o seu forte, você pode usar calculadoras de Índice de Massa Corporal disponíveis na internet.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">Calculo IMC</h2>
+                <p class="texto">A partir da conta anterior, você deve obter um resultado numérico contido em uma das linhas da tabela abaixo:</p>
+                <div>
+                    <table border="1" style="width: 100%;">
+                        <tr style="background-color: rgb(227, 224, 224)">
+                            <th colspan="1" style="width: 50%; text-align: center;" >Valor do IMC</th>
+                            <th colspan="1" style="text-align: center;">Classificação</th>
+                        </tr>
+                        <tr style="background-color: #9bc1e6;">
+                            <td style="text-align: center;">Menor do que 18,5</td>
+                            <td >Abaixo do peso</td>
+                        </tr>
+                        <tr style="background-color: #00af50;">
+                            <td>Entre 18,5 e 24,9</td>
+                            <td>Peso normal</td>
+                        </tr>
+                        <tr style="background-color: #ffc000;">
+                            <td>Entre 25 e 29,9</td>
+                            <td>Acima do peso (sobrepeso)</td>
+                        </tr>
+                        <tr style="background-color: #f2640e;">
+                            <td>Entre 30 e 34,9</td>
+                            <td>Obesidade I</td>
+                        </tr>
+                        <tr style="background-color: #da0000;">
+                            <td>Entre 35 e 39,9</td>
+                            <td>Obesidade II</td>
+                        </tr>
+                        <tr style="background-color: #9e0000;">
+                            <td>Maior do que 40</td>
+                            <td>Obesidade III</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">Exceções do IMC</h2>
+                <p class="texto">
+                    Vários grupos possuem características específicas e não se encaixam na tabela do IMC tradicional, como atletas e grávidas. Os primeiros possuem alta quantidade de
+                    massa muscular, o que resulta em um IMC acima do considerado normal, mas não significa que eles estejam acima do peso. As gestantes também podem possuir um
+                    IMC elevado, devido ao peso do bebê.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">Limitações do IMC</h2>
+                <p class="texto">
+                    Apesar de ser um dos parâmetros mais utilizados para se calcular o peso ideal, a tabela do IMC não considera diversas variáveis importantes no que diz respeito a uma
+                    vida saudável – como porcentagem de gordura visceral, o teor de massa magra e a prática de atividades físicas. Então, o ideal é utilizar outros índices e parâmetros
+                    juntamente com a tabela do IMC para obter uma avaliação adequada.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">Como diminuir o IMC?</h2>
+                <p class="texto">
+                    Por mais que não seja 100% confiável, o IMC continua sendo um índice interessante para verificar seu peso em relação à altura. Assim, se você está acima do peso,
+                    algumas dicas para diminuir o IMC são:
+                    Consultar um nutricionista para fazer o planejamento das refeições;
+                    Aumentar o gasto calórico, por meio da prática regular de exercícios;
+                    Ter uma alimentação balanceada, que inclua todos os grupos alimentares.
+                    Para emagrecer com saúde, é fundamental que você faça acompanhamento com um médico e um nutricionista. E se busca fazer grandes mudanças em seus hábitos alimentares
+                    ou de exercícios físicos, consulte os devidos especialistas.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">Como aumentar o IMC?</h2>
+                <p class="texto">
+                    Para aqueles que estão abaixo do peso segundo a tabela do índice de massa corporal, algumas dicas são:
+
+                    Aumentar a massa muscular por meio de atividades físicas, para que as calorias sejam transformadas em músculos, e não em gordura;
+                    Beber pelo menos 2 litros de água por dia – essa quantidade pode variar de acordo com seu peso;
+                    Aumentar o consumo de alimentos ricos em proteínas, vitaminas e minerais, de acordo com um cardápio elaborado pelo nutricionista;
+                    Incluir pelo menos 3 frutas em sua alimentação diária.
+                    Assim como para a perda de peso, para o ganho de massa também é fundamental o acompanhamento médico.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2 class="titulo_secundario">IMC de crianças e adolescentes</h2>
+                <p class="texto">
+                    Como esses grupos etários estão em fase de crescimento, existem tabelas e cálculos específicos para eles, que levam suas necessidades em consideração. Para acompanhar
+                    o desenvolvimento dos seus pequenos, consulte o pediatra ou hebiatra – médico especializado em adolescentes – com regularidade.
+                </p>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
